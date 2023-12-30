@@ -1,16 +1,11 @@
-import Comp from "./components/Comp/Comp"
-import {Button} from "antd"
-import { UsbOutlined, TableOutlined } from "@ant-design/icons"
-function App() {
+import { useRoutes } from "react-router-dom";
+import routes from "./router";
 
-  return (
-    <div>
-      <Button>Ant Desgin Button</Button>
-      <Comp></Comp>
-      <UsbOutlined />
-      <TableOutlined />
-    </div>
-  )
+
+export default function App() {
+
+  const outLet = useRoutes(routes)
+
+
+  return <>{outLet}</>
 }
-
-export default App
